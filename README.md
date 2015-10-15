@@ -1,20 +1,18 @@
-# cogsci-interdisciplinarity-jsd
+# Readme
 Supplementary Material for Bergmann et al (accepted)
 
+This Shiny app functions as supplementary material for Bergmann et al. (accepted). In our paper, we measured the interdisciplinarity between pairwise collaborations of authors in 425 journals, and subsequently ranked and compared the journal *Cognitive Science* to these other journals. For more details on the methodology, please see the paper and Bhat et al. (accepted).
 
+Currently, an interactive version of the Shiny app is hosted on http://shiny.tillbergmann.com/apps/cogsci/. If you want to run the app yourself, clone the repository and run it in R with `runApp()`. You might have to install some additional packages and look up exactly how to run. Feel free to contact me if you have any questions.
 
-This webpage functions as supplementary material for Bergmann et al. (accepted). In our paper, we measured the interdisciplinarity between pairwise collaborations of authors in 425 journals, and subsequently ranked and compared *Cognitive Science* to these other journals. For more details on the methodology, please see the paper and Bhat et al. (accepted).
+The data is in several files:
 
-* **JSD examples**: This tab shows three different shared publication histories and their respective JSD (Fig. 1 in the paper). The distributions visualize a low, middle and high JSD measure respectively.
+* `raw_data2.csv`: All JSD measures for each journal.
+* `avg_data2.csv`: JSD measures averaged across journals.
+* `edges.csv`: The edge data for the *CogSci* author plot.
+* `nodes.csv`: The node data for the *CogSci* author plot.
 
-* **JSD distributions** visualizes both all raw JSD measures from all pairwise collaborations in our analysis, as well as the aggregated data for each journal. The interactive plot allow you to select different groups and journals for comparison.
-
-* **Journal ranking** portrays the complete ranking of all journals and their aggregate JSD. Again, it is possible to select different journals for comparison, as well as search for specific journals.
-
-* **CogSci Author Network** visualizes each pairwise collaboration within the journal *Cognitive Science* in a social network graph. The interactive network allows you to select specific authors and analyze their collaborations and JSd measures.
-
-
-* * *
+The Shiny app consists of `server.R` and `ui.R`, as usual.
 
 #### References
 
