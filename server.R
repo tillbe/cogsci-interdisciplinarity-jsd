@@ -1,7 +1,7 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
-library(cowplot)
+# library(cowplot)
 library(visNetwork)
 library(DT)
 library(tidyr)
@@ -134,7 +134,8 @@ shinyServer(function(input, output) {
             ggtitle("Distribution of average journal JSD across databases\n") +
             geom_vline(xintercept=avg_cog, linetype="dashed", col="grey40", size=2)+
             scale_fill_discrete(name="Type of journal\n", labels=c("SCI", "SOCSCI", "Other cognitive"))+
-            guides(alpha=FALSE)
+            guides(alpha=FALSE) +
+            theme_classic() 
         return(gp)
     }
     
@@ -176,7 +177,8 @@ shinyServer(function(input, output) {
             scale_x_continuous(limits=c(0,1))+
             ggtitle("Distribution of all JSDs across databases\n")+
             scale_fill_discrete(name="Type of journal\n", labels=c("SCI", "SOCSCI","CogSci", "Other cognitive"))+
-            guides(alpha=FALSE)
+            guides(alpha=FALSE) + 
+            theme_classic()
         return(gp)
     }
     
